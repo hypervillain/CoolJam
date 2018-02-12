@@ -1,0 +1,22 @@
+type User @model {
+  id: ID! @isUnique
+  name: String
+  dateOfBirth: DateTime
+  # posts: [Post!]! @relation(name: "UserPosts")
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  githubUserId: String @isUnique
+
+}
+
+# type Post @model {
+#   id: ID! @isUnique
+#   title: String!
+#
+#   createdAt: DateTime!
+#   updatedAt: DateTime!
+#
+#   author: User! @relation(name: "UserPosts")
+# }

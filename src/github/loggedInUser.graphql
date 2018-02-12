@@ -1,0 +1,8 @@
+type LoggedInUserPayload {
+  id: ID!
+  githubUserId: String!
+}
+
+extend type Query {
+  loggedInUser: LoggedInUserPayload
+}

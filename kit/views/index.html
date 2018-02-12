@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <!-- In Production, Webpack will map CSS chunks here and create a new index.html file in dist folder -->
+    <meta name="Description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="main"></div>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://cdn.rawgit.com/download/memorystorage/0.11.0/dist/memorystorage.min.js"></script>
+    <script>
+      // polyfill.io doesn't add Array.prototype.findIndex on Chrome < 45
+      Array.prototype.findIndex = Array.prototype.findIndex || function(callback) {
+        if (this === null) {
+          throw new TypeError('Array.prototype.findIndex called on null or undefined');
+        } else if (typeof callback !== 'function') {
+          throw new TypeError('callback must be a function');
+        }
+        var list = Object(this);
+        // Makes sures it always has positive integer as length.
+        var length = list.length >>> 0;
+        var thisArg = arguments[1];
+        for (var i = 0; i < length; i++) {
+          if ( callback.call(thisArg, list[i], i, list) ) {
+            return i;
+          }
+        }
+        return -1;
+      };
+      window.DB;
+      try {
+          var x = 'test-localstorage-' + Date.now();
+          localStorage.setItem(x, x);
+          var y = localStorage.getItem(x);
+          localStorage.removeItem(x);
+          if (y !== x) {throw new Error();}
+          window.DB = localStorage;
+
+      } catch (e) {
+        // localStorage doesn't exist, use MemoryStorage instead
+        window.DB = new MemoryStorage('your-app');
+      }
+    </script>
+  </body>
+</html>

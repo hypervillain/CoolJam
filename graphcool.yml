@@ -1,0 +1,47 @@
+# Check out some examples:
+#    https://github.com/graphcool/framework/tree/master/examples
+#
+# Here are the reference docs of this definition format:
+# https://www.graph.cool/docs/reference/service-definition/graphcool.yml-foatho8aip
+#
+
+types: ./types.graphql
+
+
+functions:
+  githubAuthentication:
+    handler:
+      code:
+        src: ./src/github/githubAuthentication.ts
+        environment:
+          GITHUB_CLIENT_ID: ${env:GITHUB_CLIENT_ID}
+          GITHUB_CLIENT_SECRET: ${env:GITHUB_CLIENT_SECRET}
+    type: resolver
+    schema: ./src/github/githubAuthentication.graphql
+  loggedInUser:
+    handler:
+      code:
+        src: ./src/github/loggedInUser.ts
+    type: resolver
+    schema: ./src/github/loggedInUser.graphql
+
+
+# Read more here:
+# https://www.graph.cool/docs/reference/auth/authorization/overview-iegoo0heez
+permissions:
+  - operation: User.create
+    authenticated: false
+  - operation: User.read
+    query: ./permissions/user/readuser.graphql
+  - operation: User.update
+    authenticated: true
+    query: ./permissions/user/currentUser.graphql
+  - operation: User.delete
+    authenticated: true
+    query: ./permissions/user/currentUser.graphql
+
+# Your root tokens used for functions to get full access to the API
+# Read more here:
+# https://www.graph.cool/docs/reference/auth/authentication/authentication-tokens-eip7ahqu5o
+# rootTokens:
+#   - mytoken

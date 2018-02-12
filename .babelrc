@@ -1,0 +1,26 @@
+{
+  "presets": [
+    "es2015", "react", "stage-1",
+    ["env", {
+      "loose": true,
+      "modules": false,
+      "targets": {
+        "browsers": [
+          ">1%"
+        ],
+        "node": true
+      },
+      "useBuiltIns": true
+    }]
+  ],
+  "plugins": [
+    ["transform-runtime", {
+      "polyfill": true,
+      "loose": true,
+      "modules": false,
+      "regenerator": true
+    }],
+    ["import", { "libraryName": "antd", "style": true }],
+    "transform-object-rest-spread",
+  ]
+}

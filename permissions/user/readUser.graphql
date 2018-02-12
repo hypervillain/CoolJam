@@ -1,0 +1,17 @@
+query readUserQuery($user_id: ID!, $node_id: ID!) {
+  SomeUserExists(
+    filter: {
+      OR:[
+        {
+          AND:[
+            {id: $user_id},
+            {id: $node_id}
+          ],
+        },
+      	{
+          id: $node_id,
+          #use something like isPublic:true
+        }
+      ]
+    })
+}
