@@ -11,10 +11,13 @@ import {
 } from 'app/gql/user'
 
 import {
+  GITHUB_CLIENT_ID,
+} from 'config/project'
+
+import {
   LOGOUT_URL,
   PROFILE_URL,
   CALLBACK_URL,
-  GITHUB_CLIENT_ID
 } from 'app/utils/consts'
 
 import MainPage from 'app/pages/Main'

@@ -4,3 +4,5 @@ export const APOLLO = {
   "uri-development": '',
   "uri-production": '',
 }
+
+export const GITHUB_CLIENT_ID = ''

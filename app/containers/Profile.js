@@ -13,6 +13,9 @@ import {
 
 import {
   GITHUB_CLIENT_ID,
+} from 'config/project'
+
+import {
   ERR_NETWORK_STATUS,
 } from 'app/utils/consts'
 

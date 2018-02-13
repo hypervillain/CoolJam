@@ -1,8 +1,8 @@
 import React from 'react'
 
 import {
-  GITHUB_CLIENT_ID
-} from 'app/utils/consts'
+  GITHUB_CLIENT_ID,
+} from 'config/project'
 
 const MainPage = props => {
   return (

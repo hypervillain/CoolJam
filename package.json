@@ -1,7 +1,12 @@
 {
   "name": "Gcool",
   "version": "1.0.0",
-  "description": "My Graphcool Service",
+  "description": "CoolJam - A comprehensive React-Graphcool starter kit",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Thook/CoolJam.git"
+  },
   "scripts": {
     "browser": "webpack --colors",
     "start": "webpack-dev-server --colors"
@@ -18,7 +23,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-register": "^6.24.0",
     "css-loader": "^0.28.9",
-    "less": "^3.0.0",
+    "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "postcss-loader": "^2.1.0",
     "style-loader": "^0.20.1",
