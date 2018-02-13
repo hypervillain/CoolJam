@@ -54,7 +54,7 @@ const Profile = props => {
 }
 
 const ErrorPage = () => (
-  <h1>LOADING</h1>
+  <h1>You should probably create an Error Page!</h1>
 )
 
 /*

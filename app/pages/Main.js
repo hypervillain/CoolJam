@@ -21,7 +21,7 @@ const MainPage = props => {
               <span> Authenticate me via Github*</span>
             </a>
             <p className="primary-color mt20">
-              * Authenticate to see the whole demo
+              * Only needed to see the whole demo
             </p>
           </div>
         </div>
@@ -57,7 +57,7 @@ const MainPage = props => {
             To get the full example to work on your machine, you will need free accounts on Graphcool, Netlify and Github. You'll also probably need
             to install some packages like <a className="accent-color" target="_blank" href="https://www.netlify.com/docs/cli/">netlify-cli</a>, and read some paper like <a className="accent-color" target="_blank" href="https://www.graph.cool/docs">Graphcool docs</a>.
             <br/><br/>
-            Don't worry! We've built a comprehensive step-by-step guide on <a className="accent-color" target="_blank" href="https://github.com/THook/coolJam">Github</a>!
+            Don't worry! We've built a comprehensive step-by-step guide on <a className="accent-color" target="_blank" href="https://github.com/THook/CoolJam">Github</a>!
             <br/><br/>
             See you there! Hugo Villain
           </p>
