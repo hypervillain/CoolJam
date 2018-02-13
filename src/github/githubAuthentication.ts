@@ -23,7 +23,7 @@ export default async (event: FunctionEvent<EventData>) => {
 
   if (!process.env.GITHUB_CLIENT_ID || !process.env.GITHUB_CLIENT_SECRET) {
     console.log('Please provide a valid client id and secret!')
-    return { error: 'Github Authentication not configured correctly.' }
+    return { error: 'Github Authentication not configured correctly.\nCheck your .envrc' }
   }
 
   try {

@@ -10,7 +10,8 @@ query readUserQuery($user_id: ID!, $node_id: ID!) {
         },
       	{
           id: $node_id,
-          #use something like isPublic:true
+          # something like `isPublic:true`
+          # could allow us to retrieve public profiles!
         }
       ]
     })

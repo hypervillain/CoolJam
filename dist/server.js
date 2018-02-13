@@ -1,6 +1,6 @@
 /*
 
-  If don't want to embrace the JAMstack, this is your starting point.
+  If you don't want to embrace the JAMstack, this is your starting point.
   But consider reading this before : https://jamstack.org/
 
 */

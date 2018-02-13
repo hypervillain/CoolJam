@@ -1,12 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 
-// This config generates a production-grade browser bundle.  It minifies and
-// optimises all Javascript source code, and extracts and processes CSS before
-// dumping it in a finished `styles.css` file in the `dist` folder
-
-// ----------------------
-// IMPORTS
-
 import webpack from 'webpack';
 import WebpackConfig from 'webpack-config';
 const path = require('path')
